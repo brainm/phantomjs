@@ -1,6 +1,9 @@
 var page = require('webpage').create(),
     system = require('system'),
     address, output, size;
+    
+// Custom settings
+page.settings.resourceTimeout = 10000;
 
 if (system.args.length < 3 || system.args.length > 5) {
     console.log('Usage: rasterize.js URL filename [paperwidth*paperheight|paperformat] [zoom]');
